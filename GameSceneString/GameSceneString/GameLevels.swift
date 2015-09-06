@@ -25,9 +25,8 @@ class GameLevels {
         var row = 1
         var col = 1
         for char in sceneString {
-            var imageName = gameObjects.charToImageNameMap[String(char)]
-            if (imageName != nil) {
-                parentNode.addChild(gameObjects.createSpriteAtPos(char,imageName:imageName!,row:row, col:col,frame:parentNode.frame))
+            if let imageName = gameObjects.charToImageNameMap[String(char)] {
+                parentNode.addChild(gameObjects.createSpriteAtPos(char,imageName:imageName,row:row, col:col,frame:parentNode.frame))
             }
             col++;
             if (col == 17) {

@@ -35,24 +35,20 @@ class GameObjects {
         var yPos = frame.height - CGFloat(row-1) * blockHeight - (sprite.size.height / 2)
         sprite.position = CGPoint(x: xPos, y: yPos)
         
-        var objectPhysics = charToPhysicsMap[String(objectChar)]
-        if (objectPhysics == nil) {
-            objectPhysics = ObjectPhysics()
-        }
-        if (objectPhysics != nil) {
-            sprite.physicsBody = SKPhysicsBody( texture: texture, size: sprite.size)
-            sprite.physicsBody!.friction = 0.3//objectPhysics!.friction
-            sprite.physicsBody!.restitution = objectPhysics!.restitution
-            sprite.physicsBody!.mass = objectPhysics!.mass
-            sprite.physicsBody!.allowsRotation = objectPhysics!.allowsRotation
-            sprite.physicsBody!.dynamic = objectPhysics!.isDynamic
+        var objectPhysics = charToPhysicsMap[String(objectChar)] ?? ObjectPhysics()
+
+        sprite.physicsBody = SKPhysicsBody( texture: texture, size: sprite.size)
+        sprite.physicsBody!.friction = 0.3//objectPhysics!.friction
+        sprite.physicsBody!.restitution = objectPhysics.restitution
+        sprite.physicsBody!.mass = objectPhysics.mass
+        sprite.physicsBody!.allowsRotation = objectPhysics.allowsRotation
+        sprite.physicsBody!.dynamic = objectPhysics.isDynamic
             
-            if (objectPhysics!.autoRotate) {
-                let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:0.5)
-                sprite.runAction(SKAction.repeatActionForever(action))
-            }
-            
+        if (objectPhysics.autoRotate) {
+            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:0.5)
+            sprite.runAction(SKAction.repeatActionForever(action))
         }
+            
         
         return sprite
     }

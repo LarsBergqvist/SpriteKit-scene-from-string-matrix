@@ -19,7 +19,7 @@ let numCols = 16
 let numRows = 12
 
 let level1 =
-"          E     " + // 1
+"  O       E     " + // 1
 "    P           " + // 2
 "E       **      " + // 3
 "  **            " + // 4
