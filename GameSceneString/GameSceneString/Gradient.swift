@@ -6,7 +6,7 @@ class Gradient: SKScene {
     
     class func drawGradientImage(size: CGSize) -> UIImage {
         
-        let bounds = CGRect(origin: CGPoint.zeroPoint, size: size)
+        let bounds = CGRect(origin: CGPoint.zero, size: size)
         let opaque = false
         let scale: CGFloat = 0
         UIGraphicsBeginImageContextWithOptions(size, opaque, scale)
@@ -34,7 +34,7 @@ class Gradient: SKScene {
         let topPoint = CGPointMake(bounds.width/2, bounds.height)
         let bottomPoint = CGPointMake(bounds.width/2, 0)
         
-        CGContextDrawLinearGradient(context, gradient, bottomPoint, topPoint, 0)
+        CGContextDrawLinearGradient(context, gradient, bottomPoint, topPoint, CGGradientDrawingOptions.DrawsAfterEndLocation)
         
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
@@ -49,11 +49,11 @@ class Gradient: SKScene {
         let imageGradient = drawGradientImage(imageSize)
         imageView.image = imageGradient
         
-        var gradBack = SKTexture(image: imageGradient)
+        let gradBack = SKTexture(image: imageGradient)
         
-        var background = SKSpriteNode(texture: gradBack)
+        let background = SKSpriteNode(texture: gradBack)
         
-        background.zPosition = 0
+        background.zPosition = -10
         background.position = CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame))
         
         return background

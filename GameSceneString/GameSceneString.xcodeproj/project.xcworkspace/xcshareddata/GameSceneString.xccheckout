@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FE972ABB-22AD-4F1F-9A18-F1FE10B56701</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GameSceneString</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B30990A573D3D242DBDE31702A17262EC55E7F2E</key>
+		<string>https://github.com/LarsBergqvist/SpriteKit-scene-from-string-matrix.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GameSceneString/GameSceneString.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B30990A573D3D242DBDE31702A17262EC55E7F2E</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/LarsBergqvist/SpriteKit-scene-from-string-matrix.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B30990A573D3D242DBDE31702A17262EC55E7F2E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B30990A573D3D242DBDE31702A17262EC55E7F2E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SpriteKit-scene-from-string-matrix</string>
+		</dict>
+	</array>
+</dict>
+</plist>

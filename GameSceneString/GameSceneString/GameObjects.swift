@@ -31,11 +31,11 @@ class GameObjects {
         
         sprite.size = CGSize(width:blockWidth,height:blockHeight)
         
-        var xPos = CGFloat(col-1) * blockWidth + (sprite.size.width / 2)
-        var yPos = frame.height - CGFloat(row-1) * blockHeight - (sprite.size.height / 2)
+        let xPos = CGFloat(col-1) * blockWidth + (sprite.size.width / 2)
+        let yPos = frame.height - CGFloat(row-1) * blockHeight - (sprite.size.height / 2)
         sprite.position = CGPoint(x: xPos, y: yPos)
         
-        var objectPhysics = charToPhysicsMap[String(objectChar)] ?? ObjectPhysics()
+        let objectPhysics = charToPhysicsMap[String(objectChar)] ?? ObjectPhysics()
 
         sprite.physicsBody = SKPhysicsBody( texture: texture, size: sprite.size)
         sprite.physicsBody!.friction = 0.3//objectPhysics!.friction

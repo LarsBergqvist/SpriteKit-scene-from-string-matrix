@@ -9,7 +9,7 @@ class GameLevels {
     var currentLevel = 1;
     
     func generateNextLevelOnNode(node:SKNode) {
-        var level = levels[currentLevel-1]
+        let level = levels[currentLevel-1]
         generateLevelBackgroundFromString(level, parentNode:node )
         currentLevel++;
         if (currentLevel > levels.count) {
@@ -24,7 +24,7 @@ class GameLevels {
 
         var row = 1
         var col = 1
-        for char in sceneString {
+        for char in sceneString.characters {
             if let imageName = gameObjects.charToImageNameMap[String(char)] {
                 parentNode.addChild(gameObjects.createSpriteAtPos(char,imageName:imageName,row:row, col:col,frame:parentNode.frame))
             }
